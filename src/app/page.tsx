@@ -1,5 +1,7 @@
 import Image from 'next/image'
 import styles from './page.module.css'
+import ExampleForm from "@/components/modules/ExampleForm";
+import SharedForm from "@/components/modules/SharedForm";
 
 export default function Home() {
   return (
@@ -64,31 +66,17 @@ export default function Home() {
           <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
         </a>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+        <div
           className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
         >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
+          <SharedForm stringArg="shared string" />
+        </div>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+        <div
           className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
         >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+          <ExampleForm stringArg="some string" />
+        </div>
       </div>
     </main>
   )
